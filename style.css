@@ -1,7 +1,11 @@
-/* =================================
+/* =========================================
    AGRITECH NEXUS
-   Nature Meets Intelligence
-================================= */
+   Agriculture + Computer Technology
+   Design: Futuristic Professional
+========================================= */
+
+/* GOOGLE FONT FALLBACKS */
+
 :root {
     --dark-green: #063B2E;
     --light-green: #7CFFB2;
@@ -10,8 +14,12 @@
 
     --white: #F5F7FA;
     --grey: #AAB8C5;
+
     --card: rgba(13, 39, 66, 0.75);
+    --border: rgba(85, 199, 255, 0.2);
 }
+
+/* GLOBAL RESET */
 
 * {
     margin: 0;
@@ -21,7 +29,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+
     background:
         radial-gradient(
             circle at 10% 15%,
@@ -55,11 +64,38 @@ a {
     color: var(--dark-blue);
 }
 
+/* TYPOGRAPHY */
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-label,
+.welcome,
+.code-text {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+}
+
 /* NAVIGATION */
 
 .navbar {
     width: 100%;
     padding: 18px 8%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +107,7 @@ a {
     background: rgba(4, 21, 43, 0.88);
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(85, 199, 255, 0.15);
+    border-bottom: 1px solid var(--border);
 }
 
 .logo {
@@ -90,6 +126,7 @@ a {
 .nav-links a {
     color: var(--grey);
     font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -122,7 +159,7 @@ a {
 
 .welcome {
     color: var(--light-green);
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -130,6 +167,7 @@ a {
 .hero h1 {
     font-size: clamp(38px, 6vw, 65px);
     line-height: 1.15;
+    letter-spacing: -2px;
     margin: 20px 0;
 }
 
@@ -146,7 +184,8 @@ a {
 
 .hero p {
     color: var(--grey);
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.9;
     max-width: 550px;
 }
 
@@ -163,8 +202,9 @@ a {
     padding: 12px 25px;
     border-radius: 8px;
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 14px;
     display: inline-block;
+    transition: 0.3s;
 }
 
 .btn.primary {
@@ -193,6 +233,7 @@ a {
     position: relative;
     width: 300px;
     height: 300px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,6 +241,7 @@ a {
 
 .earth-icon {
     font-size: 110px;
+
     filter: drop-shadow(
         0 0 25px rgba(124, 255, 178, 0.5)
     );
@@ -211,8 +253,10 @@ a {
     position: absolute;
     width: 260px;
     height: 260px;
+
     border: 1px solid rgba(85, 199, 255, 0.4);
     border-radius: 50%;
+
     animation: rotate 15s linear infinite;
 }
 
@@ -222,10 +266,12 @@ a {
     border-radius: 10px;
 
     background: rgba(8, 42, 60, 0.9);
+
     border: 1px solid rgba(124, 255, 178, 0.4);
 
     color: var(--light-green);
     font-size: 13px;
+
     box-shadow: 0 0 20px rgba(85, 199, 255, 0.1);
 }
 
@@ -259,7 +305,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -267,10 +313,11 @@ a {
     color: var(--grey);
 }
 
-/* GRID */
+/* GRID LAYOUT */
 
 .grid {
     display: grid;
+
     grid-template-columns: repeat(
         auto-fit,
         minmax(220px, 1fr)
@@ -285,20 +332,23 @@ a {
 .skill-card,
 .project-card,
 .certificate-card {
+
     padding: 25px;
     border-radius: 15px;
 
     background: var(--card);
 
-    border: 1px solid rgba(85, 199, 255, 0.18);
+    border: 1px solid var(--border);
 
     transition: 0.35s;
+
     backdrop-filter: blur(10px);
 }
 
 .skill-card:hover,
 .project-card:hover,
 .certificate-card:hover {
+
     transform: translateY(-7px);
 
     border-color: var(--light-green);
@@ -310,21 +360,28 @@ a {
 .skill-card h3,
 .project-card h3,
 .certificate-card h3 {
+
     color: var(--light-green);
     margin-bottom: 10px;
+    font-size: 19px;
 }
 
 .skill-card p,
 .project-card p,
 .certificate-card p {
+
     color: var(--grey);
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 /* INNOVATION SECTION */
 
 .innovation {
+
     margin: 50px 8%;
     padding: 55px 30px;
+
     text-align: center;
 
     border-radius: 20px;
@@ -349,7 +406,7 @@ a {
     margin-top: 15px;
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 
 .contact-links {
     display: flex;
@@ -359,35 +416,51 @@ a {
 }
 
 .contact-links a {
+
     padding: 12px 25px;
+
     border: 1px solid var(--light-blue);
     border-radius: 8px;
+
     color: var(--light-blue);
+
+    font-size: 14px;
+    font-weight: 600;
+
     transition: 0.3s;
 }
 
 .contact-links a:hover {
+
     background: var(--light-green);
     color: var(--dark-blue);
+
     border-color: var(--light-green);
+
+    transform: translateY(-3px);
 }
 
 /* FOOTER */
 
 footer {
+
     padding: 25px;
+
     text-align: center;
 
     color: var(--grey);
 
     background: rgba(2, 13, 30, 0.8);
 
-    border-top: 1px solid rgba(85, 199, 255, 0.15);
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
 }
 
 /* ANIMATIONS */
 
 @keyframes float {
+
     0%, 100% {
         transform: translateY(0);
     }
@@ -398,6 +471,7 @@ footer {
 }
 
 @keyframes rotate {
+
     from {
         transform: rotate(0deg);
     }
@@ -407,7 +481,7 @@ footer {
     }
 }
 
-/* TABLET */
+/* TABLET RESPONSIVE */
 
 @media (max-width: 850px) {
 
@@ -425,6 +499,10 @@ footer {
         justify-content: center;
     }
 
+    .hero p {
+        margin: auto;
+    }
+
     .hero-visual {
         margin: 30px auto;
     }
@@ -434,7 +512,7 @@ footer {
     }
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 550px) {
 
@@ -447,6 +525,7 @@ footer {
     }
 
     .nav-links {
+
         display: none;
 
         position: absolute;
@@ -476,6 +555,7 @@ footer {
 
     .hero h1 {
         font-size: 38px;
+        letter-spacing: -1px;
     }
 
     .hero p {
@@ -499,7 +579,26 @@ footer {
         padding: 35px 20px;
     }
 
+    .innovation h2 {
+        font-size: 25px;
+    }
+
     .contact-links {
         flex-direction: column;
     }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
 }
