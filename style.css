@@ -1,0 +1,109 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #07150f;
+
+    color: #ffffff;
+
+    line-height: 1.7;
+}
+
+
+/* HEADER */
+
+header {
+    min-height: 75vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+header h1 {
+    font-size: clamp(35px, 8vw, 65px);
+
+    color: #39ff88;
+
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 15px;
+
+    color: #c8d8ce;
+
+    font-size: 18px;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 70px 10%;
+
+    border-top: 1px solid #183a29;
+}
+
+section h2 {
+    color: #39ff88;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #020a06;
+
+    color: #aab8af;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 65vh;
+    }
+
+    section {
+        padding: 45px 7%;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+}
