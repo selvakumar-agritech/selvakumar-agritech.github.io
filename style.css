@@ -602,3 +602,175 @@ footer {
     }
 
 }
+
+.agri-visual {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-glow {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(124, 255, 178, 0.2),
+        rgba(85, 199, 255, 0.2)
+    );
+
+    filter: blur(55px);
+    border-radius: 50%;
+}
+
+.visual-grid {
+    position: absolute;
+    inset: 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(85, 199, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(85, 199, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 25px 25px;
+    border-radius: 50%;
+}
+
+.visual-ring {
+    position: absolute;
+    border: 1px solid rgba(85, 199, 255, 0.3);
+    border-radius: 50%;
+}
+
+.ring-one {
+    width: 270px;
+    height: 270px;
+    animation: rotate 20s linear infinite;
+}
+
+.ring-two {
+    width: 330px;
+    height: 330px;
+    border-style: dashed;
+    animation: rotate 30s linear infinite reverse;
+}
+
+.farm-core {
+    position: relative;
+    z-index: 2;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #063B2E,
+        #071B3A
+    );
+
+    border: 2px solid rgba(124, 255, 178, 0.6);
+
+    box-shadow:
+        0 0 30px rgba(124, 255, 178, 0.2),
+        inset 0 0 25px rgba(85, 199, 255, 0.1);
+}
+
+.farm-icon {
+    font-size: 48px;
+}
+
+.farm-core h3 {
+    color: var(--light-green);
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.farm-core p {
+    color: var(--light-blue);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.tech-node {
+    position: absolute;
+    z-index: 3;
+
+    min-width: 95px;
+    padding: 10px;
+
+    text-align: center;
+
+    background: rgba(7, 27, 58, 0.95);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(85, 199, 255, 0.1);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.tech-node span {
+    display: block;
+    color: var(--light-green);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+.tech-node small {
+    color: var(--grey);
+    font-size: 10px;
+}
+
+.node-one {
+    top: 15px;
+    left: 15px;
+}
+
+.node-two {
+    top: 35px;
+    right: -10px;
+    animation-delay: 1s;
+}
+
+.node-three {
+    bottom: 25px;
+    right: 5px;
+    animation-delay: 2s;
+}
+
+.node-four {
+    bottom: 20px;
+    left: -10px;
+    animation-delay: 3s;
+}
+
+/* MOBILE VISUAL */
+
+@media (max-width: 550px) {
+
+    .agri-visual {
+        transform: scale(0.85);
+        margin: -10px auto;
+    }
+
+}
